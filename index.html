@@ -9,11 +9,12 @@
 <body>
     <!-- Encabezado -->
     <header>
+        <img src="logo.png" alt="BCN Latina" class="logo"> <!-- Logo de la radio -->
         <h1>BCN Latina</h1>
         <nav>
             <a href="#inicio">Inicio</a>
-            <a href="#programacion">Programación</a>
-            <a href="#noticias">Noticias</a>
+            <a href="#reproductor">Escucha en Vivo</a>
+            <a href="#patrocinadores">Patrocinadores</a>
             <a href="#contacto">Contacto</a>
         </nav>
     </header>
@@ -22,22 +23,33 @@
     <section id="reproductor">
         <h2>Escucha en Vivo</h2>
         <div class="player">
-            <!-- Aquí agregaremos el reproductor de radio -->
-            <button>Play</button>
+            <audio controls autoplay>
+                <source src="URL_DE_STREAMING" type="audio/mpeg">
+                Tu navegador no soporta el reproductor de audio.
+            </audio>
         </div>
     </section>
 
-    <!-- Programación -->
-    <section id="programacion">
-        <h2>Programación</h2>
-        <p>Descubre nuestros programas y horarios.</p>
-        <!-- Aquí se puede agregar el horario -->
+    <!-- Patrocinadores con Slideshow -->
+    <section id="patrocinadores">
+        <h2>Patrocinadores</h2>
+        <div class="slideshow-container">
+            <div class="mySlides fade">
+                <img src="patrocinador1.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="patrocinador2.jpg" style="width:100%">
+            </div>
+            <div class="mySlides fade">
+                <img src="patrocinador3.jpg" style="width:100%">
+            </div>
+        </div>
     </section>
 
-    <!-- Noticias -->
-    <section id="noticias">
-        <h2>Últimas Noticias</h2>
-        <p>Entérate de las novedades del mundo latino.</p>
+    <!-- Chat en Vivo -->
+    <section id="chat">
+        <h2>Chat en Vivo</h2>
+        <div id="live-chat"></div>
     </section>
 
     <!-- Contacto -->
@@ -52,9 +64,32 @@
         </form>
     </section>
 
-    <!-- Pie de página -->
+    <!-- Pie de página con redes sociales -->
     <footer>
         <p>&copy; 2023 BCN Latina - Todos los derechos reservados</p>
+        <div class="social-media">
+            <a href="https://wa.me/TU_NUMERO" target="_blank"><img src="whatsapp-icon.png" alt="WhatsApp"></a>
+            <a href="https://facebook.com/TU_PAGINA" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="https://tiktok.com/@TU_USUARIO" target="_blank"><img src="tiktok-icon.png" alt="TikTok"></a>
+            <a href="https://instagram.com/TU_USUARIO" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://youtube.com/TU_CANAL" target="_blank"><img src="youtube-icon.png" alt="YouTube"></a>
+        </div>
     </footer>
+
+    <!-- Scripts -->
+    <script src="scripts.js"></script>
+
+    <!-- Tawk.to Script para Chat en Vivo -->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+        var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+        s1.async=true;
+        s1.src='https://embed.tawk.to/671cbc634304e3196ad89246/1ib43vp5g';
+        s1.charset='UTF-8';
+        s1.setAttribute('crossorigin','*');
+        s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
 </body>
 </html>
