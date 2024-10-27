@@ -7,6 +7,15 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Estilos para el título */
+.titulo-bcn {
+    color: #ffa500; /* Naranja */
+}
+
+.titulo-latina {
+    color: #fff; /* Blanco */
+}
+
 /* Encabezado */
 header {
     background-color: #333;
