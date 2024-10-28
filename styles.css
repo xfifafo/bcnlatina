@@ -40,6 +40,14 @@ header nav a:hover {
     color: #ffa500; /* Naranja */
 }
 
+/* Estilos para el eslogan */
+.eslogan {
+    color: #fff; /* Blanco */
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 5px;
+}
+
 /* Sección del reproductor */
 #reproductor h2 {
     text-align: center;
