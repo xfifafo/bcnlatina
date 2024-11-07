@@ -62,27 +62,6 @@ header nav a:hover {
     border-radius: 5px;
 }
 
-/* Slideshow de patrocinadores */
-.slideshow-container {
-    position: center;
-    max-width: 100%;
-    margin: auto;
-}
-
-.mySlides {
-    display: none;
-}
-
-.mySlides img {
-    width: 100%;
-    border-radius: 5px;
-}
-
-/* Chat en vivo */
-#chat {
-    padding: 20px;
-    text-align: center;
-}
 
 /* Contacto */
 #contacto {
