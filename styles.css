@@ -43,6 +43,13 @@ header {
     border-radius: 10px;
 }
 
+#reproductor h2 {
+    text-align: center;
+    color: #333; /* Color existente */
+    margin-top: 20px; /* Espaciado opcional */
+    font-size: 1.5rem; /* Ajusta el tamaño del texto si lo necesitas */
+}
+
 /* Reproductor de audio */
 #reproductor .player audio {
     width: 100%;
