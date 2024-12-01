@@ -7,15 +7,6 @@ body {
     background-color: #f4f4f4;
 }
 
-/* Estilos para el título */
-.titulo-bcn {
-    color: #ffa500; /* Naranja */
-}
-
-.titulo-latina {
-    color: #fff; /* Blanco */
-}
-
 /* Encabezado */
 header {
     background-color: #333;
@@ -24,71 +15,41 @@ header {
     text-align: center;
 }
 
-header .logo {
-    width: 100px;
-    height: auto;
-    margin-bottom: 10px;
-}
-
-header nav a {
-    color: #fff;
-    margin: 0 10px;
-    text-decoration: none;
-}
-
-header nav a:hover {
+/* Título y eslogan */
+.titulo-bcn {
     color: #ffa500; /* Naranja */
 }
 
-/* Estilos para el eslogan */
+.titulo-latina {
+    color: #fff; /* Blanco */
+}
+
 .eslogan {
     color: #fff; /* Blanco */
     font-size: 1rem;
     font-style: italic;
-    margin-top: 1px;
+    margin-top: 5px;
 }
 
-/* Sección del reproductor */
-#reproductor h2 {
+/* Video */
+.video-container {
     text-align: center;
-    color: #333;
+    margin: 20px 0;
 }
 
-.player audio {
+.video-container video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+/* Reproductor de audio */
+#reproductor .player audio {
     width: 100%;
     max-width: 300px;
     margin: 20px auto;
     display: block;
     border-radius: 5px;
-}
-
-
-/* Contacto */
-#contacto {
-    padding: 20px;
-    text-align: center;
-}
-
-#contacto form input, #contacto form textarea {
-    width: 80%;
-    max-width: 500px;
-    padding: 10px;
-    margin: 5px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-}
-
-#contacto form button {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-#contacto form button:hover {
-    background-color: #ffa500; /* Naranja */
 }
 
 /* Pie de página y redes sociales */
