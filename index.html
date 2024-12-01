@@ -9,21 +9,26 @@
 <body>
     <!-- Encabezado -->
     <header>
-        <img src="img/logo.png" alt="BCN Latina" class="logo"> <!-- Logo de la radio -->
         <h1><span class="titulo-bcn">BCN</span> <span class="titulo-latina">Latin@</span></h1>
         <p class="eslogan">¡El Poder de la Radio!</p> <!-- Eslogan de la radio -->
     </header>
 
-    <!-- Reproductor en Vivo -->
-    <section id="reproductor">
-        <h2>Escucha en Vivo</h2>
-        <div class="player">
-            <audio controls autoplay>
-                <source src="https://stream.zeno.fm/567bwhr9rm0uv" type="audio/mpeg">
-                Tu navegador no soporta el reproductor de audio.
-            </audio>
-        </div>
-    </section>
+    <!-- Video y Reproductor en Vivo -->
+   <section id="reproductor">
+    <div class="video-container">
+        <video autoplay loop muted>
+            <source src="video/video.mp4" type="video/mp4">
+            Tu navegador no soporta videos HTML5.
+        </video>
+    </div>
+    <h2>Escucha en Vivo</h2>
+    <div class="player">
+        <audio controls autoplay>
+            <source src="https://stream.zeno.fm/567bwhr9rm0uv" type="audio/mpeg">
+            Tu navegador no soporta el reproductor de audio.
+        </audio>
+    </div>
+</section>
 
        <!-- Pie de página con redes sociales -->
     <footer>
