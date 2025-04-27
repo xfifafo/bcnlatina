@@ -1,3 +1,17 @@
+Te lo explico de manera sencilla, paso a paso, para agregar esto a tu web en GitHub:
+
+1. **Primero, el logo:**
+   - En tu repositorio de GitHub, ve a la carpeta "assets" (si no existe, créala)
+   - Haz clic en "Add file" > "Upload files"
+   - Arrastra tu archivo de logo o selecciónalo desde tu computadora
+   - El archivo debe llamarse exactamente "logo.png"
+   - Haz clic en "Commit changes"
+
+2. **Para el manifest.json:**
+   - En tu repositorio, haz clic en "Add file" > "Create new file"
+   - Nombra el archivo como "manifest.json"
+   - Copia y pega este contenido:
+```json
 {
      "name": "BCN Latina Radio",
      "short_name": "BCN Latina",
@@ -107,3 +121,4 @@
 Una vez que hayas subido todos estos archivos, GitHub Pages automáticamente actualizará tu sitio web. Los usuarios que visiten tu web desde un dispositivo móvil verán un botón para "Instalar la aplicación" o "Añadir a la pantalla de inicio", dependiendo del navegador que usen.
 
 ¿Necesitas que te aclare algún paso o tienes alguna duda sobre cómo hacer alguna de estas modificaciones?
+```
