@@ -5,47 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>BCN Latin@ - Radio Online</title>
     <link rel="stylesheet" href="styles.css">
+    <!-- Agregados manifest y configuración PWA -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#ffa500" />
+    <link rel="apple-touch-icon" href="/img/logo.png" />
 </head>
 <body>
     <!-- Encabezado -->
     <header>
         <h1><span class="titulo-bcn">BCN</span> <span class="titulo-latina">Latin@</span></h1>
-        <p class="eslogan">¡Al Ritmo de Tu Vida!</p> <!-- Eslogan de la radio -->
+        <p class="eslogan">¡Al Ritmo de Tu Vida!</p>
     </header>
 
     <!-- Video y Reproductor en Vivo -->
-   <section id="reproductor">
-    <div class="video-container">
-        <video autoplay loop muted>
-            <source src="video/video.mp4" type="video/mp4">
-            Tu navegador no soporta videos HTML5.
-        </video>
-    </div>
-    <h2>Escucha en Vivo</h2>
-    <div class="player">
-    <audio autoplay controls>
-        <source src="https://stream.zeno.fm/567bwhr9rm0uv" type="audio/mpeg">
-        Tu navegador no soporta el reproductor de audio.
-    </audio>
-</div>       
-<div style="text-align: center; margin-top: 10px;">
-    <a href="https://wa.me/34621488738" target="_blank" style="color: #25D366; font-size: 18px; text-decoration: none;">
-        📱 WhatsApp: +34 621 488 738
-    </a>
-</div>
+    <section id="reproductor">
+        <div class="video-container">
+            <video autoplay loop muted>
+                <source src="video/video.mp4" type="video/mp4">
+                Tu navegador no soporta videos HTML5.
+            </video>
+        </div>
+        <h2>Escucha en Vivo</h2>
+        <div class="player">
+            <audio autoplay controls>
+                <source src="https://stream.zeno.fm/567bwhr9rm0uv" type="audio/mpeg">
+                Tu navegador no soporta el reproductor de audio.
+            </audio>
+        </div>
+        <div style="text-align: center; margin-top: 10px;">
+            <a href="https://wa.me/34621488738" target="_blank" style="color: #25D366; font-size: 18px; text-decoration: none;">
+                📱 WhatsApp: +34 621 488 738
+            </a>
+        </div>
+    </section>
 
-</section>
-
-       <!-- Pie de página con redes sociales -->
+    <!-- Pie de página con redes sociales -->
     <footer>
-       
         <div class="social-media">
             <a href="https://wa.me/+34621488738" target="_blank">
                 <img src="img/whatsapp-icon.png" alt="WhatsApp">
             </a>
             <a href="https://instagram.com/bcnllatina" target="_blank">
                 <img src="img/instagram-icon.png" alt="Instagram">
-            
             </a>
             <a href="https://tiktok.com/@bcnllatina" target="_blank">
                 <img src="img/tiktok-icon.png" alt="TikTok">
@@ -57,11 +58,18 @@
                 <img src="img/youtube-icon.png" alt="YouTube">
             </a>
         </div>
-         <p>&copy; 2023 BCN Latina - Todos los derechos reservados</p>
+        <p>&copy; 2025 BCN Latina - Todos los derechos reservados</p>
     </footer>
 
-    <!-- Scripts -->
-    
+    <!-- Script para Service Worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js').catch(error => {
+                    console.error('Service Worker registration failed:', error);
+                });
+            });
+        }
     </script>
 </body>
 </html>
