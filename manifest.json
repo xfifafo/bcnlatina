@@ -2,25 +2,26 @@
   "name": "BCN Latina Radio",
   "short_name": "BCN Latina",
   "description": "Radio latina en directo desde Barcelona",
-  "start_url": "/",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#f4f4f4",
   "theme_color": "#ffa500",
   "icons": [
     {
-      "src": "/img/logo.png",
+      "src": "img/logo.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "/img/logo.png",
+      "src": "img/logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
     }
   ],
   "orientation": "portrait",
+  "scope": "/",
   "lang": "es",
   "dir": "ltr",
   "categories": ["music", "entertainment"]
