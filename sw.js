@@ -12,12 +12,8 @@ const ASSETS_TO_CACHE = [
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
-      .then((cache) => {
-        return cache.addAll(ASSETS_TO_CACHE);
-      })
-      .catch((error) => {
-        console.error('Error during service worker installation:', error);
-      })
+      .then((cache) => cache.addAll(ASSETS_TO_CACHE))
+      .catch((error) => console.error('Cache installation error:', error))
   );
   self.skipWaiting();
 });
@@ -34,9 +30,7 @@ self.addEventListener('activate', (event) => {
           })
         );
       })
-      .then(() => {
-        return self.clients.claim();
-      })
+      .then(() => self.clients.claim())
   );
 });
 
@@ -58,10 +52,6 @@ self.addEventListener('fetch', (event) => {
                 cache.put(event.request, responseToCache);
               });
             return response;
-          })
-          .catch((error) => {
-            console.error('Fetch error:', error);
-            throw error;
           });
       })
   );
