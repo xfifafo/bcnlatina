@@ -4,6 +4,7 @@ const ASSETS_TO_CACHE = [
   '/index.html',
   '/manifest.json',
   '/sw.js',
+  '/favicon.ico',
   '/img/logo.png',
   'https://stream.zeno.fm/2kd6wvz7zxhvv'
 ];
