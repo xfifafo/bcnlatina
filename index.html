@@ -42,6 +42,45 @@
         </div>
     </section>
 
+    <!-- Contenedor con estilo marquesina -->
+<div style="overflow: hidden; white-space: nowrap; margin-top: 15px;">
+  <div id="metadata" style="
+    display: inline-block;
+    color: white;
+    font-size: 18px;
+    animation: scroll-left 15s linear infinite;
+  ">
+    🎵 Cargando canción...
+  </div>
+</div>
+
+<!-- Estilo CSS para la animación de desplazamiento -->
+<style>
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+</style>
+
+<!-- Script para obtener metadatos desde Zeno -->
+<script>
+setInterval(() => {
+  fetch("https://streaming.zeno.fm/metadata/567bwhr9rm0uv.json")
+    .then(response => response.json())
+    .then(data => {
+      const title = data.nowplaying || "Sin información";
+      document.getElementById("metadata").innerText = "🎵 En reproducción: " + title;
+    })
+    .catch(() => {
+      document.getElementById("metadata").innerText = "🎵 No se pudo cargar la canción";
+    });
+}, 5000);
+</script>
+
     <!-- Pie de página con redes sociales -->
     <footer>
         <div class="social-media">
