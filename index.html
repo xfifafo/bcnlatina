@@ -42,7 +42,7 @@
         </div>
     </section>
 
-    <!-- Contenedor con estilo marquesina -->
+   <!-- Contenedor con estilo marquesina -->
 <div style="overflow: hidden; white-space: nowrap; margin-top: 15px;">
   <div id="metadata" style="
     display: inline-block;
@@ -54,7 +54,6 @@
   </div>
 </div>
 
-<!-- Estilo CSS para la animación de desplazamiento -->
 <style>
 @keyframes scroll-left {
   0% {
@@ -66,10 +65,9 @@
 }
 </style>
 
-<!-- Script para obtener metadatos desde Zeno -->
 <script>
 setInterval(() => {
-  fetch("https://streaming.zeno.fm/metadata/567bwhr9rm0uv.json")
+  fetch("https://streaming.zeno.fm/metadata/fwb3nhr9rm0uv.json")
     .then(response => response.json())
     .then(data => {
       const title = data.nowplaying || "Sin información";
