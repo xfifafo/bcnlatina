@@ -67,7 +67,7 @@
 
 <script>
 setInterval(() => {
-  fetch("https://streaming.zeno.fm/metadata/fwb3nhr9rm0uv.json")
+  fetch("https://bcnlatina.es/zenometadata.php")
     .then(response => response.json())
     .then(data => {
       const title = data.nowplaying || "Sin información";
